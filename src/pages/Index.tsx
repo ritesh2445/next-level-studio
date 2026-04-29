@@ -15,23 +15,27 @@ const Index = () => {
       <Navbar />
       <HeroVideo />
       <MarqueeStrip
-        text="Wedding Photography • Cinematic Films • Pre-Wedding Stories • Fashion • Destination Weddings • Amravati •"
-        duration={28}
+        eyebrow="Next Level Photography"
+        text="Signature Realms of Storytelling"
+        description="A seamless blend of tradition and emotion. Explore weddings, cinematic films, pre-wedding stories and fashion editorials — crafted by the studio of Next Level Photography, Amravati."
       />
       <HeroImage />
       <MarqueeStrip
-        text="Moments You'll Relive Forever • Authentic Emotions • Timeless Memories • Every Frame Tells A Story •"
-        duration={32}
+        eyebrow="Moments, Reframed"
+        text="Memories You'll Relive Forever"
+        description="Authentic emotions, timeless frames and unhurried storytelling — every wedding captured as a piece of art that lives beyond the day."
       />
       <VideoGrid />
       <MarqueeStrip
-        text="500+ Couples • 8+ Years • 15+ Cities • Award-Winning Films • Listed on IMDB • Maharashtra's Finest •"
-        duration={24}
+        eyebrow="A Legacy in Frames"
+        text="500+ Couples · 8+ Years · 15+ Cities"
+        description="Award-winning films listed on IMDB. Trusted across Maharashtra and beyond for cinematic wedding storytelling of the finest order."
       />
       <IconicGrid />
       <MarqueeStrip
-        text="Cinematic Storytelling • Indian Wedding Landscape • Soul & Cinema • Every Wedding is Unique • Timeless Frames •"
-        duration={36}
+        eyebrow="Soul & Cinema"
+        text="Iconic Frames From The Indian Wedding Landscape"
+        description="Every wedding is unique. Every frame, intentional. A body of work shaped by light, emotion and the quiet poetry of Indian celebrations."
       />
       <PhotoBlog />
       <FilmsSection />
