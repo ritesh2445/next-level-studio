@@ -1,12 +1,11 @@
-import heroImg from "@/assets/hero-wedding.jpg";
+import heroImg from "@/assets/hero-couple-arch.jpg";
 
 export const HeroImage = () => (
-  <section className="relative w-full h-screen overflow-hidden">
+  <section className="relative w-full overflow-hidden bg-background">
     <img
       src={heroImg}
-      alt="Bride and groom in traditional Indian wedding attire at golden hour"
-      className="w-full h-full object-cover object-top md:object-top"
-      style={{ objectPosition: "center" }}
+      alt="Couple framed by a black circular arch — fine art wedding portrait"
+      className="w-full h-auto object-contain"
     />
   </section>
 );
