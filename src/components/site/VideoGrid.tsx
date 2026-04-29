@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const cells = [
-  { label: "BRIDAL", url: "https://assets.mixkit.co/videos/preview/mixkit-bride-and-groom-kissing-during-the-wedding-4600-large.mp4" },
-  { label: "CANDID", url: "https://assets.mixkit.co/videos/preview/mixkit-wedding-couple-walking-in-the-countryside-4626-large.mp4" },
-  { label: "PRE-WEDDING", url: "https://assets.mixkit.co/videos/preview/mixkit-couple-in-love-in-a-park-4628-large.mp4" },
-  { label: "DESTINATION", url: "https://assets.mixkit.co/videos/preview/mixkit-wedding-ceremony-at-an-outdoor-venue-4616-large.mp4" },
+  { label: "BRIDAL", url: "https://shop.taruntahiliani.com/cdn/shop/videos/c/vp/f65a13ca2da64884b86ebdff1bbf00ff/f65a13ca2da64884b86ebdff1bbf00ff.HD-1080p-7.2Mbps-54392494.mp4?v=0" },
+  { label: "CANDID", url: "https://shop.taruntahiliani.com/cdn/shop/videos/c/vp/62727adf548f417aaef9607f0fea87dc/62727adf548f417aaef9607f0fea87dc.HD-1080p-7.2Mbps-54392496.mp4?v=0" },
+  { label: "PRE-WEDDING", url: "https://shop.taruntahiliani.com/cdn/shop/videos/c/vp/3e2b7319a7744e0eadd36e1b5d9d4c6d/3e2b7319a7744e0eadd36e1b5d9d4c6d.HD-1080p-7.2Mbps-54392495.mp4?v=0" },
+  { label: "DESTINATION", url: "https://shop.taruntahiliani.com/cdn/shop/videos/c/vp/a655a5a8a06345a28d5fe3b66e561910/a655a5a8a06345a28d5fe3b66e561910.HD-1080p-7.2Mbps-54392493.mp4?v=0" },
 ];
 
 export const VideoGrid = () => {
