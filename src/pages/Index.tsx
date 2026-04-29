@@ -8,6 +8,7 @@ import { PhotoBlog } from "@/components/site/PhotoBlog";
 import { FilmsSection } from "@/components/site/FilmsSection";
 import { ContactSection } from "@/components/site/ContactSection";
 import { Footer } from "@/components/site/Footer";
+import { WhatsAppFab } from "@/components/site/WhatsAppFab";
 
 const Index = () => {
   return (
@@ -41,6 +42,7 @@ const Index = () => {
       <FilmsSection />
       <ContactSection />
       <Footer />
+      <WhatsAppFab />
     </main>
   );
 };

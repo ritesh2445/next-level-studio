@@ -52,18 +52,18 @@ export const Navbar = () => {
   return (
     <>
       <header ref={headerRef} className="site-header">
-        <nav className="flex items-center justify-between px-6 md:px-10 h-[70px]">
-          <a href="#top" className="flex items-center">
+        <nav className="flex items-center px-6 md:px-10 h-[70px]">
+          <a href="#top" className="flex items-center mr-auto">
             <span className="text-white font-sans font-light text-[1.4rem] tracking-[0.05em] lowercase">nextlevel</span>
           </a>
 
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-8 ml-auto">
             {links.map((l) => (
               <li key={l.href}><a href={l.href} className="nav-link">{l.label}</a></li>
             ))}
           </ul>
 
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-4 ml-8">
             <a href="https://instagram.com" aria-label="Instagram" className="text-white hover:text-primary transition-colors"><Instagram size={18} strokeWidth={1.5} /></a>
             <a href="https://facebook.com" aria-label="Facebook" className="text-white hover:text-primary transition-colors"><Facebook size={18} strokeWidth={1.5} /></a>
             <a href="#contact" className="btn-gold">Get In Touch</a>
