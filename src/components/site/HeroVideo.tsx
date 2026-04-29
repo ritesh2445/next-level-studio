@@ -21,7 +21,7 @@ export const HeroVideo = () => {
   };
 
   return (
-    <section id="top" className="relative w-screen h-screen overflow-hidden bg-black">
+    <section id="top" className="relative w-full h-[80vh] md:h-[85vh] overflow-hidden bg-black">
       {/* Desktop video */}
       <video
         ref={desktopRef}
@@ -48,7 +48,7 @@ export const HeroVideo = () => {
       />
 
       {/* Centered overlay text — mimics Tarun Tahiliani hero */}
-      <div className="absolute inset-0 flex flex-col items-center justify-end pb-24 md:pb-28 text-white text-center pointer-events-none">
+      <div className="absolute inset-0 flex flex-col items-center justify-end pb-16 md:pb-20 text-white text-center pointer-events-none">
         <p className="font-sans text-[0.7rem] md:text-[0.78rem] tracking-[0.35em] font-semibold">
           EVER&middot;BLOOM
         </p>
