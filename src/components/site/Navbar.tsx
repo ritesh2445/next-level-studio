@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Instagram, Facebook, Menu, X } from "lucide-react";
+import logo from "@/assets/logonl2.png";
 
 export const Navbar = () => {
   const headerRef = useRef<HTMLElement>(null);
@@ -12,17 +13,14 @@ export const Navbar = () => {
       const header = headerRef.current;
       if (!header) return;
       const y = window.scrollY;
-      const scrollingUp = y < lastY.current;
-      const past = y > 80;
+      const past = y > 50;
 
-      if (!past || scrollingUp || hovering.current) {
-        header.classList.remove("nav-hidden");
-        if (past || hovering.current) header.classList.add("nav-revealed");
-        else header.classList.remove("nav-revealed");
+      if (past || hovering.current) {
+        header.classList.add("nav-revealed");
       } else {
-        header.classList.add("nav-hidden");
         header.classList.remove("nav-revealed");
       }
+      header.classList.remove("nav-hidden");
       lastY.current = y;
     };
     window.addEventListener("scroll", update, { passive: true });
@@ -54,7 +52,7 @@ export const Navbar = () => {
       <header ref={headerRef} className="site-header">
         <nav className="flex items-center px-6 md:px-10 h-[70px]">
           <a href="#top" className="flex items-center mr-auto">
-            <span className="text-white logo-font text-[1.8rem] tracking-[0.05em]">Next Level</span>
+            <img src={logo} alt="Next Level" className="h-8 md:h-12 w-auto object-contain" />
           </a>
 
           <ul className="hidden md:flex items-center gap-8 ml-auto">
