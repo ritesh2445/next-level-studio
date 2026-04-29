@@ -54,7 +54,7 @@ export const Navbar = () => {
       <header ref={headerRef} className="site-header">
         <nav className="flex items-center px-6 md:px-10 h-[70px]">
           <a href="#top" className="flex items-center mr-auto">
-            <span className="text-white font-sans font-light text-[1.4rem] tracking-[0.05em] lowercase">nextlevel</span>
+            <span className="text-white font-sans font-light text-[1.8rem] tracking-[0.05em] lowercase">nextlevel</span>
           </a>
 
           <ul className="hidden md:flex items-center gap-8 ml-auto">

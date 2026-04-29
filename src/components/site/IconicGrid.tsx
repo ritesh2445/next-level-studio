@@ -16,9 +16,12 @@ const grid = [
 
 export const IconicGrid = () => (
   <section className="bg-background">
-    <div className="grid grid-cols-3 md:grid-cols-5 gap-0 w-full">
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-0 w-full">
       {grid.map((src, i) => (
-        <div key={i} className="img-zoom relative" style={{ aspectRatio: "1 / 1" }}>
+        <div 
+          key={i} 
+          className="img-zoom relative aspect-square"
+        >
           <img src={src} alt={`Iconic frame ${i + 1}`} loading="lazy" />
         </div>
       ))}
