@@ -51,25 +51,40 @@ export const Navbar = () => {
     <>
       <header ref={headerRef} className="site-header">
         <nav className="flex items-center px-6 md:px-10 h-[70px]">
-          <a href="#top" className="flex items-center mr-auto">
-            <img src={logo} alt="Next Level" className="h-8 md:h-12 w-auto object-contain" />
-          </a>
-
-          <ul className="hidden md:flex items-center gap-8 ml-auto">
-            {links.map((l) => (
-              <li key={l.href}><a href={l.href} className="nav-link">{l.label}</a></li>
-            ))}
-          </ul>
-
-          <div className="hidden md:flex items-center gap-4 ml-8">
-            <a href="https://instagram.com" aria-label="Instagram" className="text-white hover:text-primary transition-colors"><Instagram size={18} strokeWidth={1.5} /></a>
-            <a href="https://facebook.com" aria-label="Facebook" className="text-white hover:text-primary transition-colors"><Facebook size={18} strokeWidth={1.5} /></a>
-            <a href="#contact" className="btn-gold">Get In Touch</a>
+          {/* Left: Desktop links */}
+          <div className="flex-1 flex items-center">
+            <div className="md:hidden w-[22px]"></div> {/* Spacer to balance mobile menu button */}
+            <ul className="hidden md:flex items-center gap-8">
+              {links.slice(0, 2).map((l) => (
+                <li key={l.href}><a href={l.href} className="nav-link">{l.label}</a></li>
+              ))}
+            </ul>
           </div>
 
-          <button onClick={() => setOpen(true)} aria-label="Open menu" className="md:hidden text-white">
-            <Menu size={22} />
-          </button>
+          {/* Center: Logo */}
+          <div className="flex-none">
+            <a href="#top" className="flex items-center">
+              <img src={logo} alt="Next Level" className="h-8 md:h-12 w-auto object-contain" />
+            </a>
+          </div>
+
+          {/* Right: Desktop links + Socials + Button / Mobile Menu */}
+          <div className="flex-1 flex items-center justify-end gap-4 md:gap-8">
+            <ul className="hidden md:flex items-center gap-8">
+              {links.slice(2).map((l) => (
+                <li key={l.href}><a href={l.href} className="nav-link">{l.label}</a></li>
+              ))}
+            </ul>
+            <div className="hidden md:flex items-center gap-4">
+              <a href="https://instagram.com" aria-label="Instagram" className="text-white hover:text-primary transition-colors"><Instagram size={18} strokeWidth={1.5} /></a>
+              <a href="https://facebook.com" aria-label="Facebook" className="text-white hover:text-primary transition-colors"><Facebook size={18} strokeWidth={1.5} /></a>
+              <a href="#contact" className="btn-gold">Get In Touch</a>
+            </div>
+
+            <button onClick={() => setOpen(true)} aria-label="Open menu" className="md:hidden text-white">
+              <Menu size={22} />
+            </button>
+          </div>
         </nav>
       </header>
 
