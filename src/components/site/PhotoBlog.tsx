@@ -23,7 +23,7 @@ export const PhotoBlog = () => (
       <a href="#photography" className="font-sans text-[0.75rem] text-ink hover:text-primary tracking-[0.05em]">View All →</a>
     </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-[5%] pb-8">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-[5%] pb-8">
       {cards.map((c, i) => (
         <a key={i} href="#" className="block text-ink">
           <div className="img-zoom mb-3" style={{ aspectRatio: "3 / 4" }}>
