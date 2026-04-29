@@ -13,15 +13,26 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Playfair Display", "Georgia", "serif"],
+        sans: ["Montserrat", "system-ui", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          soft: "hsl(var(--ink-soft))",
+          mute: "hsl(var(--ink-mute))",
+        },
+        hairline: "hsl(var(--hairline))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
