@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { Instagram, Facebook, Menu, X } from "lucide-react";
-import logo from "@/assets/nl-logo.png";
 
 export const Navbar = () => {
   const headerRef = useRef<HTMLElement>(null);
@@ -54,8 +53,7 @@ export const Navbar = () => {
     <>
       <header ref={headerRef} className="site-header">
         <nav className="flex items-center justify-between px-6 md:px-10 h-[70px]">
-          <a href="#top" className="flex items-center gap-2">
-            <img src={logo} alt="NEXT LEVEL Photography logo" className="w-6 h-6 object-contain" />
+          <a href="#top" className="flex items-center">
             <span className="text-white font-sans font-light text-[1.4rem] tracking-[0.05em] lowercase">nextlevel</span>
           </a>
 
