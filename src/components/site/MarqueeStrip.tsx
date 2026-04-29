@@ -23,18 +23,18 @@ export const MarqueeStrip = ({ eyebrow, text, description }: MarqueeStripProps) 
     description ?? segments.slice(1).join(" · ");
 
   return (
-    <section className="w-full bg-white py-16 md:py-24 px-6">
+    <section className="w-full bg-white py-10 px-5 md:py-24 md:px-6">
       <div className="max-w-3xl mx-auto text-center">
         {eyebrow && (
-          <p className="text-[11px] md:text-xs tracking-[0.35em] uppercase text-neutral-500 mb-4 font-sans">
+          <p className="text-[10px] md:text-xs tracking-[0.3em] md:tracking-[0.35em] uppercase text-neutral-500 mb-3 md:mb-4 font-sans">
             {eyebrow}
           </p>
         )}
-        <h2 className="font-serif text-2xl md:text-4xl tracking-[0.18em] uppercase text-neutral-900">
+        <h2 className="font-serif text-[1.05rem] leading-snug md:text-4xl tracking-[0.12em] md:tracking-[0.18em] uppercase text-neutral-900">
           {heading}
         </h2>
         {fallbackDescription && (
-          <p className="mt-5 md:mt-6 text-sm md:text-base leading-relaxed text-neutral-600 font-sans">
+          <p className="mt-3 md:mt-6 text-[12px] md:text-base leading-relaxed text-neutral-600 font-sans px-2 md:px-0">
             {fallbackDescription}
           </p>
         )}
