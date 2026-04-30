@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/site/Navbar";
+import { AboutEditorial } from "@/components/site/AboutEditorial";
 import { HeroVideo } from "@/components/site/HeroVideo";
 import { MarqueeStrip } from "@/components/site/MarqueeStrip";
 import { HeroImage } from "@/components/site/HeroImage";
@@ -21,11 +22,7 @@ const Index = () => {
         description="A seamless blend of tradition and emotion. Explore weddings, cinematic films, pre-wedding stories and fashion editorials — crafted by the studio of Next Level Photography, Amravati."
       />
       <HeroImage />
-      <MarqueeStrip
-        eyebrow="Moments, Reframed"
-        text="Memories You'll Relive Forever"
-        description="Authentic emotions, timeless frames and unhurried storytelling — every wedding captured as a piece of art that lives beyond the day."
-      />
+      <AboutEditorial />
       <VideoGrid />
       <MarqueeStrip
         eyebrow="A Legacy in Frames"

@@ -30,7 +30,7 @@ export const MarqueeStrip = ({ eyebrow, text, description }: MarqueeStripProps) 
             {eyebrow}
           </p>
         )}
-        <h2 className="font-serif text-[1.05rem] leading-snug md:text-4xl tracking-[0.12em] md:tracking-[0.18em] uppercase text-neutral-900">
+        <h2 className="font-didot font-normal text-[1.05rem] leading-snug md:text-4xl tracking-[0.12em] md:tracking-[0.18em] uppercase text-neutral-900">
           {heading}
         </h2>
         {fallbackDescription && (

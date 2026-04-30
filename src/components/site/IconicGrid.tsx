@@ -8,6 +8,7 @@ import b2 from "@/assets/b2.jpg";
 import iconic from "@/assets/iconic-text.jpg";
 import mosaic from "@/assets/mosaic-couple.jpg";
 
+
 const grid = [
   wedding, hero, fashion, prewed, films,
   b2, b1, iconic, b1, wedding,

@@ -2,12 +2,13 @@ import b1 from "@/assets/b1.jpg";
 import mosaic from "@/assets/mosaic-couple.jpg";
 import wedding from "@/assets/wedding-ceremony.jpg";
 import fashion from "@/assets/fashion.jpg";
+import { Link } from "react-router-dom";
 
 const cards = [
-  { img: b1, couple: "Reva & Zach", date: "Oct 7, 2024" },
-  { img: mosaic, couple: "An Evening of Love", date: "Aug 25, 2024" },
-  { img: wedding, couple: "Alia & Ranbir, Mumbai", date: "Aug 8, 2024" },
-  { img: fashion, couple: "Kiara & Siddharth", date: "Apr 24, 2024" },
+  { img: b1, couple: "Reva & Zach", date: "Oct 7, 2024", slug: "reva-zach" },
+  { img: mosaic, couple: "An Evening of Love", date: "Aug 25, 2024", slug: "evening-of-love" },
+  { img: wedding, couple: "Alia & Ranbir, Mumbai", date: "Aug 8, 2024", slug: "alia-ranbir-mumbai" },
+  { img: fashion, couple: "Kiara & Siddharth", date: "Apr 24, 2024", slug: "kiara-siddharth" },
 ];
 
 export const PhotoBlog = () => (
@@ -25,7 +26,7 @@ export const PhotoBlog = () => (
 
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-[5%] pb-8">
       {cards.map((c, i) => (
-        <a key={i} href="#" className="block text-ink">
+        <Link key={i} to={`/photography/${c.slug}`} className="block text-ink">
           <div className="img-zoom mb-3" style={{ aspectRatio: "3 / 4" }}>
             <img src={c.img} alt={c.couple} loading="lazy" />
           </div>
@@ -36,9 +37,9 @@ export const PhotoBlog = () => (
     </div>
 
     <div className="flex justify-center pb-16">
-      <a href="#" className="inline-block border border-ink px-10 py-3 font-sans text-[0.72rem] tracking-[0.18em] uppercase text-ink hover:bg-ink hover:text-white transition-colors">
+      <Link to="/photography/reva-zach" className="inline-block border border-ink px-10 py-3 font-sans text-[0.72rem] tracking-[0.18em] uppercase text-ink hover:bg-ink hover:text-white transition-colors">
         Photography Blog
-      </a>
+      </Link>
     </div>
   </section>
 );

@@ -23,42 +23,93 @@ export const VideoGrid = () => {
   }, []);
 
   return (
-    <section className="relative w-screen overflow-hidden bg-black">
-      {/* Desktop 2x2 */}
-      <div className="hidden md:grid w-screen h-screen grid-cols-2 grid-rows-2 gap-0">
+    <section className="relative w-full overflow-hidden bg-black">
+      {/* Desktop: 2-column grid, flush edge-to-edge, no gaps — Tarun Tahiliani pattern */}
+      <div className="hidden md:grid w-full grid-cols-2 gap-0">
         {cells.map((c) => (
-          <div key={c.label} className="relative overflow-hidden group">
-            <video src={c.url} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/35 group-hover:bg-black/15 transition-colors duration-500" />
-            <div className="absolute bottom-8 left-8 z-10 text-white transition-transform duration-300 group-hover:-translate-y-1">
-              <p className="text-[0.65rem] tracking-[0.2em]">{c.label}</p>
-              <a href="#photography" className="text-[0.7rem] tracking-[0.1em] hover:underline mt-1 inline-block">Explore →</a>
+          <div
+            key={c.label}
+            className="relative overflow-hidden group border-0"
+            style={{ aspectRatio: "4 / 5" }}
+          >
+            <video
+              src={c.url}
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            {/* Dark overlay — lifts on hover */}
+            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
+            {/* Bottom label + CTA */}
+            <div className="absolute bottom-10 left-0 right-0 z-10 text-white text-center transition-transform duration-300 group-hover:-translate-y-1">
+              <p className="font-didot text-[1rem] md:text-[1.15rem] tracking-[0.25em] uppercase">
+                {c.label}
+              </p>
+              <a
+                href="#photography"
+                className="inline-block mt-4 text-[0.65rem] tracking-[0.18em] uppercase border border-white/70 px-6 py-2.5 text-white hover:bg-white hover:text-black transition-colors duration-300"
+              >
+                Discover
+              </a>
             </div>
           </div>
         ))}
       </div>
 
-      {/* Mobile carousel */}
+      {/* Mobile: full-width snap carousel, tall vertical frames */}
       <div className="md:hidden">
         <div
           ref={carouselRef}
           className="flex overflow-x-auto no-scrollbar"
-          style={{ scrollSnapType: "x mandatory", WebkitOverflowScrolling: "touch", height: "85vw" }}
+          style={{
+            scrollSnapType: "x mandatory",
+            WebkitOverflowScrolling: "touch",
+          }}
         >
           {cells.map((c) => (
-            <div key={c.label} className="relative overflow-hidden flex-shrink-0" style={{ flex: "0 0 85vw", height: "85vw", scrollSnapAlign: "start" }}>
-              <video src={c.url} autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-black/35" />
-              <div className="absolute bottom-6 left-6 z-10 text-white">
-                <p className="text-[0.65rem] tracking-[0.2em]">{c.label}</p>
-                <a href="#photography" className="text-[0.7rem] tracking-[0.1em] mt-1 inline-block underline">Explore →</a>
+            <div
+              key={c.label}
+              className="relative overflow-hidden flex-shrink-0"
+              style={{
+                flex: "0 0 100vw",
+                aspectRatio: "4 / 5",
+                scrollSnapAlign: "start",
+              }}
+            >
+              <video
+                src={c.url}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30" />
+              <div className="absolute bottom-8 left-0 right-0 z-10 text-white text-center">
+                <p className="font-didot text-[1rem] tracking-[0.25em] uppercase">
+                  {c.label}
+                </p>
+                <a
+                  href="#photography"
+                  className="inline-block mt-3 text-[0.6rem] tracking-[0.18em] uppercase border border-white/70 px-5 py-2 text-white"
+                >
+                  Discover
+                </a>
               </div>
             </div>
           ))}
         </div>
-        <div className="flex justify-center gap-2 py-4 bg-white">
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-2 py-4 bg-black">
           {cells.map((_, i) => (
-            <span key={i} className={`w-2 h-2 rounded-full transition-colors ${i === active ? "bg-primary" : "bg-[#cccccc]"}`} />
+            <span
+              key={i}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                i === active ? "bg-white" : "bg-white/30"
+              }`}
+            />
           ))}
         </div>
       </div>

@@ -16,6 +16,7 @@ export default {
       fontFamily: {
         display: ["Playfair Display", "Georgia", "serif"],
         sans: ["Montserrat", "system-ui", "sans-serif"],
+        didot: ["Didot Title", "GFS Didot", "Didot", "Bodoni MT", "Playfair Display", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
