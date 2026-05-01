@@ -36,7 +36,7 @@ export const PhotoBlog = () => (
       ))}
     </div>
 
-    <div className="flex justify-center pb-16">
+    <div className="flex justify-center pb-4">
       <Link to="/photography/reva-zach" className="inline-block border border-ink px-10 py-3 font-sans text-[0.72rem] tracking-[0.18em] uppercase text-ink hover:bg-ink hover:text-white transition-colors">
         Photography Blog
       </Link>

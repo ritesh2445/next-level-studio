@@ -58,8 +58,8 @@ export const VideoGrid = () => {
         ))}
       </div>
 
-      {/* Mobile: full-width snap carousel, tall vertical frames */}
-      <div className="md:hidden">
+      {/* Mobile: full-width snap carousel, optimized height */}
+      <div className="md:hidden relative">
         <div
           ref={carouselRef}
           className="flex overflow-x-auto no-scrollbar"
@@ -74,7 +74,7 @@ export const VideoGrid = () => {
               className="relative overflow-hidden flex-shrink-0"
               style={{
                 flex: "0 0 100vw",
-                aspectRatio: "4 / 5",
+                aspectRatio: "1 / 1",
                 scrollSnapAlign: "start",
               }}
             >
@@ -86,14 +86,14 @@ export const VideoGrid = () => {
                 playsInline
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="absolute bottom-8 left-0 right-0 z-10 text-white text-center">
-                <p className="font-didot text-[1rem] tracking-[0.25em] uppercase">
+              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute bottom-12 left-0 right-0 z-10 text-white text-center">
+                <p className="font-didot text-[0.9rem] tracking-[0.2em] uppercase">
                   {c.label}
                 </p>
                 <a
                   href="#photography"
-                  className="inline-block mt-3 text-[0.6rem] tracking-[0.18em] uppercase border border-white/70 px-5 py-2 text-white"
+                  className="inline-block mt-4 text-[0.55rem] tracking-[0.15em] uppercase border border-white/60 px-5 py-2 text-white"
                 >
                   Discover
                 </a>
@@ -101,13 +101,14 @@ export const VideoGrid = () => {
             </div>
           ))}
         </div>
-        {/* Dot indicators */}
-        <div className="flex justify-center gap-2 py-4 bg-black">
+        
+        {/* Dot indicators overlay (TT style) */}
+        <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-2 pointer-events-none z-20">
           {cells.map((_, i) => (
             <span
               key={i}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                i === active ? "bg-white" : "bg-white/30"
+              className={`w-1.5 h-1.5 rounded-full transition-colors ${
+                i === active ? "bg-white" : "bg-white/40"
               }`}
             />
           ))}

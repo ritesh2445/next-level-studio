@@ -14,7 +14,7 @@ const cards = [
 export const FilmsSection = () => (
   <section id="films" className="bg-background">
     {/* Section header */}
-    <div className="px-4 md:px-[8%] pt-16 pb-8 flex items-end justify-between flex-wrap gap-4">
+    <div className="px-4 md:px-[8%] pt-4 pb-8 flex items-end justify-between flex-wrap gap-4">
       <div>
         <div className="label-row mb-3">
           <span className="label-dash" />
@@ -26,7 +26,7 @@ export const FilmsSection = () => (
     </div>
 
     {/* 2×2 video grid — HOTC style */}
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-3 md:gap-y-[48px] px-3 md:px-[8%] pb-16">
+    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-3 md:gap-y-[48px] px-3 md:px-[8%] pb-4">
       {cards.map((c, i) => (
         <a key={i} href="#" className="relative block group overflow-hidden" style={{ aspectRatio: "16 / 9" }}>
           {/* Thumbnail image */}
