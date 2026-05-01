@@ -13,7 +13,7 @@ export const ContactSection = () => {
   const inputCls = "w-full bg-transparent border-0 border-b border-[hsl(var(--input))] py-3 font-sans text-[0.85rem] text-ink placeholder:text-[#aaa] outline-none focus:border-ink transition-colors";
 
   return (
-    <section id="contact" className="bg-background pt-12 pb-24 px-[5%]">
+    <section id="contact" className="bg-background pt-8 pb-16 px-[5%]">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-start max-w-7xl mx-auto">
         <div>
           <div className="label-row mb-4">

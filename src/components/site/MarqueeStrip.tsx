@@ -1,6 +1,4 @@
 interface MarqueeStripProps {
-  /** Small eyebrow line (optional) */
-  eyebrow?: string;
   /** Main heading text */
   text: string;
   /** Supporting paragraph below the heading */
@@ -14,7 +12,7 @@ interface MarqueeStripProps {
  * Inspired by the Tarun Tahiliani "Signature Realms of Style" band:
  * white background, centered serif heading, soft body copy.
  */
-export const MarqueeStrip = ({ eyebrow, text, description }: MarqueeStripProps) => {
+export const MarqueeStrip = ({ text, description }: MarqueeStripProps) => {
   // Use the first segment as the heading; remaining segments become the description
   // when no explicit description is supplied.
   const segments = text.split("•").map((s) => s.trim()).filter(Boolean);
@@ -23,18 +21,13 @@ export const MarqueeStrip = ({ eyebrow, text, description }: MarqueeStripProps) 
     description ?? segments.slice(1).join(" · ");
 
   return (
-    <section className="w-full bg-white py-10 px-5 md:py-24 md:px-6">
-      <div className="max-w-3xl mx-auto text-center">
-        {eyebrow && (
-          <p className="text-[10px] md:text-xs tracking-[0.3em] md:tracking-[0.35em] uppercase text-neutral-500 mb-3 md:mb-4 font-sans">
-            {eyebrow}
-          </p>
-        )}
-        <h2 className="font-didot font-normal text-[1.05rem] leading-snug md:text-4xl tracking-[0.12em] md:tracking-[0.18em] uppercase text-neutral-900">
+    <section className="w-full bg-white py-6 px-5 md:py-10 md:px-6">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="font-sans font-bold text-[0.85rem] md:text-[1.1rem] tracking-[0.4em] md:tracking-[0.5em] uppercase text-neutral-800">
           {heading}
         </h2>
         {fallbackDescription && (
-          <p className="mt-3 md:mt-6 text-[12px] md:text-base leading-relaxed text-neutral-600 font-sans px-2 md:px-0">
+          <p className="mt-4 md:mt-8 text-[13px] md:text-base leading-[1.8] text-neutral-600 font-sans px-2 md:px-0 max-w-2xl mx-auto">
             {fallbackDescription}
           </p>
         )}

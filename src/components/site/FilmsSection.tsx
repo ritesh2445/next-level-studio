@@ -26,7 +26,7 @@ export const FilmsSection = () => (
     </div>
 
     {/* 2×2 video grid — HOTC style */}
-    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-x-3 md:gap-y-[48px] px-3 md:px-[8%] pb-4">
+    <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-x-3 md:gap-y-[48px] px-3 md:px-[8%] pb-4">
       {cards.map((c, i) => (
         <a key={i} href="#" className="relative block group overflow-hidden" style={{ aspectRatio: "16 / 9" }}>
           {/* Thumbnail image */}

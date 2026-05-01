@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import logo from "@/assets/nl-logo2.png";
 
 const cells = [
   { label: "BRIDAL", url: "https://shop.taruntahiliani.com/cdn/shop/videos/c/vp/f65a13ca2da64884b86ebdff1bbf00ff/f65a13ca2da64884b86ebdff1bbf00ff.HD-1080p-7.2Mbps-54392494.mp4?v=0" },
@@ -25,12 +26,11 @@ export const VideoGrid = () => {
   return (
     <section className="relative w-full overflow-hidden bg-black">
       {/* Desktop: 2-column grid, flush edge-to-edge, no gaps — Tarun Tahiliani pattern */}
-      <div className="hidden md:grid w-full grid-cols-2 gap-0">
+      <div className="hidden md:grid w-full grid-cols-2 gap-0 relative">
         {cells.map((c) => (
           <div
             key={c.label}
-            className="relative overflow-hidden group border-0"
-            style={{ aspectRatio: "4 / 5" }}
+            className="relative overflow-hidden group border-0 h-[115vh]"
           >
             <video
               src={c.url}
@@ -56,6 +56,15 @@ export const VideoGrid = () => {
             </div>
           </div>
         ))}
+        
+        {/* Intersection Logo — Absolute center of the 4-video grid */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none">
+          <img 
+            src={logo} 
+            alt="Next Level Logo" 
+            className="w-24 h-24 md:w-48 md:h-48 object-contain drop-shadow-2xl opacity-90" 
+          />
+        </div>
       </div>
 
       {/* Mobile: full-width snap carousel, optimized height */}
@@ -74,7 +83,7 @@ export const VideoGrid = () => {
               className="relative overflow-hidden flex-shrink-0"
               style={{
                 flex: "0 0 100vw",
-                aspectRatio: "1 / 1",
+                aspectRatio: "0.8 / 1",
                 scrollSnapAlign: "start",
               }}
             >

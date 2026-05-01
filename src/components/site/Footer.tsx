@@ -1,10 +1,10 @@
 import { Instagram, Facebook, Twitter } from "lucide-react";
 
 export const Footer = () => (
-  <footer className="bg-[hsl(var(--dark-bg))] text-white px-[5%] pt-4 md:pt-20 pb-2 md:pb-10">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12 items-start max-w-7xl mx-auto">
+  <footer className="bg-[hsl(var(--dark-bg))] text-white px-[5%] pt-16 md:pt-32 pb-8 md:pb-20">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 items-start max-w-7xl mx-auto">
       {/* Left: logo + wordmark + socials */}
-      <div className="flex flex-col items-center md:items-start text-center md:text-left">
+      <div className="flex flex-col items-start text-left">
         <img
           src="/nl-logo-real.png"
           alt="NEXT LEVEL Photography"
@@ -29,7 +29,7 @@ export const Footer = () => (
       </div>
 
       {/* Middle: locations + privacy */}
-      <div className="text-center md:text-left md:pt-2">
+      <div className="text-left md:pt-2">
         <p className="font-sans text-sm tracking-[0.04em] text-white">Amravati . Nagpur . Pune</p>
         <p className="font-sans text-xs md:text-sm tracking-[0.04em] text-white mt-2 md:mt-8 cursor-pointer hover:text-primary transition-colors">
           Privacy Policy
@@ -37,7 +37,7 @@ export const Footer = () => (
       </div>
 
       {/* Right: contact */}
-      <div className="text-center md:text-left md:pt-2">
+      <div className="text-left md:pt-2">
         <p className="font-sans text-sm text-white">+91 95451 36425</p>
         <a
           href="mailto:nextlevelphotography.in@gmail.com"
@@ -48,11 +48,13 @@ export const Footer = () => (
       </div>
     </div>
 
-    <div className="border-t border-white/10 mt-4 md:mt-14 pt-2 md:pt-6 flex flex-col md:flex-row justify-between items-center gap-1 max-w-7xl mx-auto">
+    <div className="border-t border-white/10 mt-12 md:mt-24 pt-4 md:pt-8 text-center md:flex md:justify-between md:text-left items-center max-w-7xl mx-auto">
       <p className="font-sans text-[0.6rem] tracking-[0.1em] text-white/40">
         © 2025 NEXT LEVEL Photography. All rights reserved.
       </p>
-      <p className="font-sans text-[0.6rem] tracking-[0.1em] text-white/40">Crafted with ♥ in Amravati</p>
+      <p className="font-sans text-[0.6rem] tracking-[0.1em] text-white/40 hidden md:block">
+        Crafted with ♥ in Amravati
+      </p>
     </div>
   </footer>
 );
