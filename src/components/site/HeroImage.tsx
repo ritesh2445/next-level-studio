@@ -5,7 +5,7 @@ export const HeroImage = () => (
     <img
       src={heroImg}
       alt="Couple framed by a black circular arch — fine art wedding portrait"
-      className="w-full h-[70vh] md:h-[75vh] object-cover object-bottom"
+      className="w-full h-[60vh] md:h-[70vh] object-cover object-bottom"
     />
   </section>
 );
