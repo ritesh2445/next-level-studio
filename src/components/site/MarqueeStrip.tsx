@@ -21,13 +21,13 @@ export const MarqueeStrip = ({ text, description }: MarqueeStripProps) => {
     description ?? segments.slice(1).join(" · ");
 
   return (
-    <section className="w-full bg-white py-6 px-5 md:py-10 md:px-6">
+    <section className="w-full bg-white py-14 px-5 md:py-10 md:px-6 border-y border-hairline">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-sans font-bold text-[0.85rem] md:text-[1.1rem] tracking-[0.4em] md:tracking-[0.5em] uppercase text-neutral-800">
+        <h2 className="font-didot font-normal text-[0.9rem] md:text-[1.1rem] tracking-[0.4em] md:tracking-[0.5em] uppercase text-neutral-800">
           {heading}
         </h2>
         {fallbackDescription && (
-          <p className="mt-4 md:mt-8 text-[13px] leading-[1.8] text-neutral-600 font-didot px-2 md:px-0 max-w-2xl mx-auto">
+          <p className="mt-4 md:mt-8 text-[13px] md:text-base leading-[1.8] text-neutral-600 font-sans px-2 md:px-0 max-w-2xl mx-auto">
             {fallbackDescription}
           </p>
         )}
