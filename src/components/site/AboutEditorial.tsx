@@ -18,10 +18,10 @@ export const AboutEditorial = () => {
 
         {/* ── Body copy ── */}
         <div className="max-w-3xl text-center">
-          <p className="font-sans text-[13px] md:text-base leading-[1.8] text-neutral-600 mb-8 font-normal">
+          <p className="font-didot text-[13px] md:text-base leading-[1.8] text-neutral-600 mb-8 font-normal max-w-2xl mx-auto">
             Capturing timeless love stories through elegant, cinematic wedding photography — where every glance, every tear, every unscripted laugh is preserved with soul and artistry.
           </p>
-          <p className="font-sans text-[13px] md:text-base leading-[1.8] text-neutral-600 font-normal italic">
+          <p className="font-didot text-[13px] md:text-base leading-[1.8] text-neutral-600 font-normal italic max-w-2xl mx-auto">
             "We don’t just take photos. We craft heirlooms of emotion, woven in light and shadow, designed to be felt for generations."
           </p>
         </div>

@@ -27,7 +27,7 @@ export const MarqueeStrip = ({ text, description }: MarqueeStripProps) => {
           {heading}
         </h2>
         {fallbackDescription && (
-          <p className="mt-4 md:mt-8 text-[13px] md:text-base leading-[1.8] text-neutral-600 font-sans px-2 md:px-0 max-w-2xl mx-auto">
+          <p className="mt-4 md:mt-8 text-[13px] md:text-base leading-[1.8] text-neutral-600 font-didot px-2 md:px-0 max-w-2xl mx-auto">
             {fallbackDescription}
           </p>
         )}
