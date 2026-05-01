@@ -19,6 +19,7 @@ const Index = () => {
       <MarqueeStrip
         text="Signature Realms of Storytelling"
         description="A seamless blend of tradition and emotion. Explore weddings, cinematic films, pre-wedding stories and fashion editorials — crafted by the studio of Next Level Photography, Amravati."
+        className="pt-6 pb-10 md:pt-6 md:pb-8"
       />
       <HeroImage />
       <AboutEditorial />

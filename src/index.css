@@ -141,11 +141,11 @@
     will-change: transform;
   }
   .marquee-track > span {
-    font-family: 'Didot Title', 'GFS Didot', serif;
+    font-family: 'Lexend', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: hsl(var(--ink));
+    color: #525252;
     font-weight: 400;
     padding-right: 0;
   }

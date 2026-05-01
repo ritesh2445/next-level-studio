@@ -1,8 +1,12 @@
+import { cn } from "@/lib/utils";
+
 interface MarqueeStripProps {
   /** Main heading text */
   text: string;
   /** Supporting paragraph below the heading */
   description?: string;
+  /** Optional additional classes */
+  className?: string;
   /** @deprecated kept for backwards compatibility */
   duration?: number;
 }
@@ -12,7 +16,7 @@ interface MarqueeStripProps {
  * Inspired by the Tarun Tahiliani "Signature Realms of Style" band:
  * white background, centered serif heading, soft body copy.
  */
-export const MarqueeStrip = ({ text, description }: MarqueeStripProps) => {
+export const MarqueeStrip = ({ text, description, className }: MarqueeStripProps) => {
   // Use the first segment as the heading; remaining segments become the description
   // when no explicit description is supplied.
   const segments = text.split("•").map((s) => s.trim()).filter(Boolean);
@@ -21,9 +25,9 @@ export const MarqueeStrip = ({ text, description }: MarqueeStripProps) => {
     description ?? segments.slice(1).join(" · ");
 
   return (
-    <section className="w-full bg-white pt-10 pb-14 px-5 md:py-10 md:px-6 border-y border-hairline">
+    <section className={cn("w-full bg-white pt-10 pb-14 px-5 md:py-10 md:px-6 border-y border-hairline", className)}>
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-sans font-bold text-[0.85rem] md:text-[1.1rem] tracking-[0.4em] md:tracking-[0.5em] uppercase text-neutral-800">
+        <h2 className="font-lexend font-bold text-[0.85rem] md:text-[1.1rem] tracking-[0.4em] md:tracking-[0.5em] uppercase text-neutral-600">
           {heading}
         </h2>
         {fallbackDescription && (
