@@ -21,7 +21,7 @@ export const HeroVideo = () => {
   };
 
   return (
-    <section id="top" className="relative w-full h-[65vh] md:h-[80vh] overflow-hidden bg-black">
+    <section id="top" className="relative w-full h-[85vh] md:h-[90vh] overflow-hidden bg-black">
       {/* Desktop video */}
       <video
         ref={desktopRef}
