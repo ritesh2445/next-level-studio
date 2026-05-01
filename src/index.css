@@ -201,7 +201,7 @@
   .about-ed {
     position: relative;
     width: 100%;
-    background: #f2eee8;
+    background: white;
     height: 900px;
     overflow: hidden;
     padding: 0 4%;
@@ -345,55 +345,79 @@
     .about-ed {
       position: relative;
       height: auto;
-      padding: 2.5rem 1.25rem 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+      padding: 3.5rem 1.5rem 4rem;
+      background: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 0;
     }
 
     .about-ed__title {
       position: relative;
       top: auto;
       left: auto;
-      z-index: 2;
-      width: 85%;
+      grid-column: 1 / span 2;
+      width: 100%;
+      margin-bottom: 2.5rem;
+      z-index: 10;
     }
 
-    .about-ed__right {
-      position: relative;
-      top: auto;
-      right: auto;
+    .about-ed__title-img {
       width: 100%;
-      order: 1;
-    }
-
-    .about-ed__right img {
-      height: 260px;
-      width: 100%;
+      height: auto;
     }
 
     .about-ed__left {
       position: relative;
       top: auto;
       left: auto;
-      width: 65%;
-      order: 3;
+      grid-column: 1;
+      width: 100%;
     }
 
     .about-ed__left img {
-      height: 300px;
+      height: auto;
+      aspect-ratio: 4/5;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .about-ed__right {
+      position: relative;
+      top: auto;
+      right: auto;
+      left: auto;
+      grid-column: 2;
+      width: 100%;
+      margin-top: 70px; /* Precise staggered offset */
+    }
+
+    .about-ed__right img {
+      height: auto;
+      aspect-ratio: 4/5;
+      width: 100%;
+      object-fit: cover;
     }
 
     .about-ed__copy {
       position: relative;
       top: auto;
       left: auto;
+      grid-column: 1 / span 2;
       width: 100%;
-      order: 2;
+      margin-top: 45px;
+      padding: 0 4px;
     }
 
     .about-ed__copy p {
-      font-size: 0.82rem;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.8rem;
+      color: #000;
+      text-align: left;
     }
   }
 }
