@@ -19,7 +19,7 @@ const Index = () => {
       <MarqueeStrip
         text="Signature Realms of Storytelling"
         description="Our signature style lies in crafting visually striking Western-themed wedding stories that feel both cinematic and deeply personal. We specialize in creating creative, thoughtfully composed shots that go beyond traditional frames—blending mood, styling, and storytelling into every scene. From concept-driven setups to dynamic intro pattern videos, we design each sequence with a strong narrative flow that captures the essence of your celebration. Our approach is not just about documenting moments, but about elevating them into timeless visuals with a distinctive, modern Western aesthetic that sets your story apart."
-        className="pt-6 pb-10 md:pt-[calc(2.5rem+3vh)] md:pb-[calc(3rem+3vh)]"
+        className="pt-6 pb-[calc(2.5rem-1vh)] md:pt-[calc(2.5rem+3vh)] md:pb-[calc(3rem+3vh)]"
       />
       <HeroImage />
       <AboutEditorial />
