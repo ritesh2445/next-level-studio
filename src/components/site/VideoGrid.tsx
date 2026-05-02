@@ -30,7 +30,7 @@ export const VideoGrid = () => {
         {cells.map((c) => (
           <div
             key={c.label}
-            className="relative overflow-hidden group border-0 h-[115vh]"
+            className="relative overflow-hidden group border-0 h-[108vh]"
           >
             <video
               src={c.url}

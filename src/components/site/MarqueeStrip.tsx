@@ -27,7 +27,7 @@ export const MarqueeStrip = ({ text, description, className }: MarqueeStripProps
   return (
     <section className={cn("w-full bg-white pt-10 pb-14 px-5 md:py-10 md:px-6 border-y border-hairline", className)}>
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="font-lexend font-bold text-[0.85rem] md:text-[1.1rem] tracking-[0.4em] md:tracking-[0.5em] uppercase text-neutral-600">
+        <h2 className="font-century font-bold text-[0.85rem] md:text-[1.1rem] tracking-[0.2em] md:tracking-[0.3em] uppercase text-neutral-600">
           {heading}
         </h2>
         {fallbackDescription && (

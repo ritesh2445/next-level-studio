@@ -141,9 +141,9 @@
     will-change: transform;
   }
   .marquee-track > span {
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Century Gothic', 'AppleGothic', sans-serif;
     font-size: 0.75rem;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #525252;
     font-weight: 400;
