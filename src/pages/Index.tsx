@@ -18,20 +18,22 @@ const Index = () => {
       <HeroVideo />
       <MarqueeStrip
         text="Signature Realms of Storytelling"
-        description="A seamless blend of tradition and emotion. Explore weddings, cinematic films, pre-wedding stories and fashion editorials — crafted by the studio of Next Level Photography, Amravati."
-        className="pt-6 pb-10 md:pt-6 md:pb-8"
+        description="Our signature style lies in crafting visually striking Western-themed wedding stories that feel both cinematic and deeply personal. We specialize in creating creative, thoughtfully composed shots that go beyond traditional frames—blending mood, styling, and storytelling into every scene. From concept-driven setups to dynamic intro pattern videos, we design each sequence with a strong narrative flow that captures the essence of your celebration. Our approach is not just about documenting moments, but about elevating them into timeless visuals with a distinctive, modern Western aesthetic that sets your story apart."
+        className="pt-6 pb-10 md:pt-[calc(2.5rem+3vh)] md:pb-[calc(3rem+3vh)]"
       />
       <HeroImage />
       <AboutEditorial />
       <VideoGrid />
       <MarqueeStrip
-        text="500+ Couples · 8+ Years · 15+ Cities"
-        description="Award-winning films listed on IMDB. Trusted across Maharashtra and beyond for cinematic wedding storytelling of the finest order."
+        text="Stories in Frames"
+        description="Our most iconic captures, where every image reflects timeless moments, creative vision, and unforgettable storytelling."
+        className="md:py-14"
       />
       <IconicGrid />
       <MarqueeStrip
-        text="Iconic Frames From The Indian Wedding Landscape"
-        description="Every wedding is unique. Every frame, intentional. A body of work shaped by light, emotion and the quiet poetry of Indian celebrations."
+        text="A seamless blend of tradition and emotion"
+        description="Explore weddings, cinematic films, pre-wedding stories and fashion editorials — crafted by the studio of Next Level Photography, Amravati."
+        className="md:py-14"
       />
       <PhotoBlog />
       <FilmsSection />

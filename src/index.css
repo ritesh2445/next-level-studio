@@ -10,6 +10,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Tw Cen MT';
+  src: url('./assets/Tw Cen MT.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* NEXT LEVEL Photography — Design System
    All colors HSL. Editorial luxury aesthetic.
 */
@@ -141,7 +149,7 @@
     will-change: transform;
   }
   .marquee-track > span {
-    font-family: 'Century Gothic', 'AppleGothic', sans-serif;
+    font-family: 'Tw Cen MT', 'Century Gothic', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;

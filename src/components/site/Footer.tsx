@@ -10,7 +10,7 @@ export const Footer = () => (
           alt="NEXT LEVEL Photography"
           className="w-10 h-10 md:w-16 md:h-16 object-contain mb-2 md:mb-5"
         />
-        <div className="font-serif leading-[1.05] tracking-[0.02em] text-white">
+        <div className="font-century leading-[1.05] tracking-[0.1em] md:tracking-[0.15em] text-white">
           <div className="text-base md:text-4xl">NEXT</div>
           <div className="text-base md:text-4xl">LEVEL</div>
           <div className="text-base md:text-4xl">PHOTOGRAPHY</div>

@@ -30,7 +30,7 @@ export const VideoGrid = () => {
         {cells.map((c) => (
           <div
             key={c.label}
-            className="relative overflow-hidden group border-0 h-[108vh]"
+            className="relative overflow-hidden group border-0 h-[99.5vh]"
           >
             <video
               src={c.url}
@@ -43,13 +43,13 @@ export const VideoGrid = () => {
             {/* Dark overlay — lifts on hover */}
             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
             {/* Bottom label + CTA */}
-            <div className="absolute bottom-10 left-0 right-0 z-10 text-white text-center transition-transform duration-300 group-hover:-translate-y-1">
-              <p className="font-didot text-[1rem] md:text-[1.15rem] tracking-[0.25em] uppercase">
+            <div className="absolute bottom-[calc(2.5rem-1.5vh)] left-0 right-0 z-10 text-white text-center transition-transform duration-300 group-hover:-translate-y-1">
+              <p className="font-century text-[1rem] md:text-[1.15rem] tracking-[0.25em] uppercase">
                 {c.label}
               </p>
               <a
                 href="#photography"
-                className="inline-block mt-4 text-[0.65rem] tracking-[0.18em] uppercase border border-white/70 px-6 py-2.5 text-white hover:bg-white hover:text-black transition-colors duration-300"
+                className="inline-block mt-4 text-[0.85rem] font-century tracking-[0.18em] uppercase text-white hover:underline underline-offset-4 transition-all duration-300"
               >
                 Discover
               </a>
@@ -97,12 +97,12 @@ export const VideoGrid = () => {
               />
               <div className="absolute inset-0 bg-black/20" />
               <div className="absolute bottom-12 left-0 right-0 z-10 text-white text-center">
-                <p className="font-didot text-[0.9rem] tracking-[0.2em] uppercase">
+                <p className="font-century text-[0.9rem] tracking-[0.2em] uppercase">
                   {c.label}
                 </p>
                 <a
                   href="#photography"
-                  className="inline-block mt-4 text-[0.55rem] tracking-[0.15em] uppercase border border-white/60 px-5 py-2 text-white"
+                  className="inline-block mt-4 text-[0.75rem] font-century tracking-[0.15em] uppercase text-white hover:underline underline-offset-4"
                 >
                   Discover
                 </a>

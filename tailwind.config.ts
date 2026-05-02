@@ -20,7 +20,7 @@ export default {
         outfit: ["Outfit", "sans-serif"],
         lexend: ["Lexend", "sans-serif"],
         cormorant: ["Cormorant Garamond", "serif"],
-        century: ["Century Gothic", "AppleGothic", "sans-serif"],
+        century: ["Tw Cen MT", "Century Gothic", "AppleGothic", "sans-serif"],
         didot: ["Didot Title", "GFS Didot", "Didot", "Bodoni MT", "Playfair Display", "Georgia", "serif"],
       },
       colors: {

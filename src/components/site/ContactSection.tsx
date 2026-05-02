@@ -28,9 +28,9 @@ export const ContactSection = () => {
           </p>
 
           {[
-            { label: "Phone", values: ["+91 9545136425", "+91 8788113565"] },
-            { label: "Email", values: ["nextlevelphotography.in@gmail.com"] },
             { label: "Studio", values: ["Dreamz Landmark, Amravati,", "Maharashtra 444601"] },
+            { label: "Email", values: ["nextlevelphotography.in@gmail.com"] },
+            { label: "Phone", values: ["+91 9545136425", "+91 8788113565"] },
           ].map((info, i) => (
             <div key={info.label} className={i > 0 ? "border-t border-hairline pt-5 mt-5" : ""}>
               <p className="font-sans text-[0.6rem] tracking-[0.2em] uppercase text-ink-mute mb-2">{info.label}</p>

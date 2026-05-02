@@ -35,17 +35,17 @@ const PhotographyBlog = () => {
           <h1 className="font-didot text-4xl md:text-7xl mb-8 md:mb-12 text-ink">
             {blog.couple}.
           </h1>
-          <p className="font-didot text-lg md:text-2xl leading-relaxed text-ink-soft mb-12 md:mb-16 max-w-2xl mx-auto">
+          <p className="font-century text-lg md:text-xl leading-relaxed text-ink-soft mb-12 md:mb-16 max-w-2xl mx-auto">
             {blog.description}
           </p>
           
           <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
             {blog.credits.map((credit) => (
               <div key={credit.label} className="text-center">
-                <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-ink-mute mb-1">
+                <p className="font-century text-[10px] tracking-[0.2em] uppercase text-ink-mute mb-1">
                   {credit.label}
                 </p>
-                <p className="font-didot text-base text-ink">
+                <p className="font-century text-base text-ink">
                   {credit.value}
                 </p>
               </div>
@@ -55,8 +55,8 @@ const PhotographyBlog = () => {
       </section>
 
       {/* ── Image Grid ── */}
-      <section className="px-4 md:px-[8%] pb-24">
-        <div className="max-w-7xl mx-auto space-y-6 md:space-y-12">
+      <section className="px-4 md:px-[10%] pb-24">
+        <div className="max-w-[1400px] mx-auto space-y-4 md:space-y-8">
           {/* We'll loop through the images and render them based on type */}
           {/* For this simplified demo, we'll group split images into rows */}
           {(() => {
@@ -70,7 +70,7 @@ const PhotographyBlog = () => {
                     <img 
                       src={img.url} 
                       alt="" 
-                      className="w-full h-auto object-cover"
+                      className="w-full h-auto object-cover block"
                       loading="lazy"
                     />
                   </div>
@@ -80,7 +80,7 @@ const PhotographyBlog = () => {
                 const nextImg = blog.images[i + 1];
                 if (nextImg && nextImg.type === 'split') {
                   elements.push(
-                    <div key={i} className="grid grid-cols-2 gap-4 md:gap-12">
+                    <div key={i} className="grid grid-cols-2 gap-4 md:gap-8">
                       <div className="overflow-hidden">
                         <img 
                           src={img.url} 
@@ -127,12 +127,12 @@ const PhotographyBlog = () => {
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             <Link to="/" className="flex items-center gap-3 text-ink-mute hover:text-ink transition-colors">
               <ArrowLeft size={20} strokeWidth={1.5} />
-              <span className="font-sans text-[10px] tracking-[0.2em] uppercase">Previous</span>
+              <span className="font-century text-[10px] tracking-[0.2em] uppercase">Previous</span>
             </Link>
             
             <Link to={`/photography/${blog.nextPost.slug}`} className="group flex flex-col items-end text-right">
               <div className="flex items-center gap-3 text-ink mb-2">
-                <span className="font-sans text-[10px] tracking-[0.2em] uppercase">Next Post</span>
+                <span className="font-century text-[10px] tracking-[0.2em] uppercase">Next Post</span>
                 <ArrowRight size={20} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform" />
               </div>
               <h4 className="font-didot text-2xl md:text-5xl text-ink group-hover:italic transition-all">
