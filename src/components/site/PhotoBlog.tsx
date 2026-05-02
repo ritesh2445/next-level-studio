@@ -13,7 +13,7 @@ const cards = [
 
 export const PhotoBlog = () => (
   <section id="photography" className="bg-background">
-    <div className="px-[5%] pt-16 pb-10 flex items-end justify-between flex-wrap gap-4">
+    <div className="px-[5%] pt-[4vh] pb-10 flex items-end justify-between flex-wrap gap-4">
       <div>
         <div className="label-row mb-3">
           <span className="label-dash" />
