@@ -55,8 +55,8 @@ const PhotographyBlog = () => {
       </section>
 
       {/* ── Image Grid ── */}
-      <section className="px-4 md:px-[10%] pb-24">
-        <div className="max-w-[1400px] mx-auto space-y-4 md:space-y-8">
+      <section className="px-2 md:px-[5%] pb-24">
+        <div className="max-w-[1400px] mx-auto space-y-2 md:space-y-4">
           {/* We'll loop through the images and render them based on type */}
           {/* For this simplified demo, we'll group split images into rows */}
           {(() => {
@@ -80,7 +80,7 @@ const PhotographyBlog = () => {
                 const nextImg = blog.images[i + 1];
                 if (nextImg && nextImg.type === 'split') {
                   elements.push(
-                    <div key={i} className="grid grid-cols-2 gap-4 md:gap-8">
+                    <div key={i} className="grid grid-cols-2 gap-2 md:gap-4">
                       <div className="overflow-hidden">
                         <img 
                           src={img.url} 
@@ -125,9 +125,9 @@ const PhotographyBlog = () => {
       {blog.nextPost && (
         <section className="border-t border-ink/10 py-16 px-6 bg-white/30">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            <Link to="/" className="flex items-center gap-3 text-ink-mute hover:text-ink transition-colors">
+            <Link to="/photography" className="flex items-center gap-3 text-ink-mute hover:text-ink transition-colors">
               <ArrowLeft size={20} strokeWidth={1.5} />
-              <span className="font-century text-[10px] tracking-[0.2em] uppercase">Previous</span>
+              <span className="font-century text-[10px] tracking-[0.2em] uppercase">Return to Portfolio</span>
             </Link>
             
             <Link to={`/photography/${blog.nextPost.slug}`} className="group flex flex-col items-end text-right">

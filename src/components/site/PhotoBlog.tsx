@@ -21,7 +21,7 @@ export const PhotoBlog = () => (
         </div>
         <h2 className="font-century font-bold text-[1.15rem] md:text-[1.6rem] tracking-[0.1em] md:tracking-[0.15em] uppercase text-neutral-600 leading-tight">Our Work</h2>
       </div>
-      <a href="#photography" className="font-sans text-[0.75rem] text-ink hover:text-primary tracking-[0.05em]">View All →</a>
+      <Link to="/photography" className="font-sans text-[0.75rem] text-ink hover:text-primary tracking-[0.05em]">View All →</Link>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 px-[5%] pb-8">
@@ -37,7 +37,7 @@ export const PhotoBlog = () => (
     </div>
 
     <div className="flex justify-center pb-4">
-      <Link to="/photography/reva-zach" className="inline-block border border-ink px-10 py-3 font-sans text-[0.72rem] tracking-[0.18em] uppercase text-ink hover:bg-ink hover:text-white transition-colors">
+      <Link to="/photography" className="inline-block border border-ink px-10 py-3 font-sans text-[0.72rem] tracking-[0.18em] uppercase text-ink hover:bg-ink hover:text-white transition-colors">
         Photography Blog
       </Link>
     </div>

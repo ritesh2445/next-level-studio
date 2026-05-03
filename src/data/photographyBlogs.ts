@@ -7,6 +7,17 @@ import prewedding from "@/assets/prewedding.jpg";
 import heroCouple from "@/assets/hero-couple-arch.jpg";
 import heroWedding from "@/assets/hero-wedding.jpg";
 
+import i01 from "@/assets/01.jpg";
+import i02 from "@/assets/02.jpg";
+import i03 from "@/assets/03.jpg";
+import i04 from "@/assets/04.jpg";
+import i05 from "@/assets/05.jpg";
+import i06 from "@/assets/06.jpg";
+import i07 from "@/assets/07.jpg";
+import i08 from "@/assets/08.jpg";
+import i09 from "@/assets/09.jpg";
+import i10 from "@/assets/10.jpg";
+
 export interface PhotoBlogData {
   slug: string;
   couple: string;
@@ -33,10 +44,14 @@ export const photographyBlogs: Record<string, PhotoBlogData> = {
     ],
     heroImage: b1,
     images: [
-      { url: b1, type: 'full' },
+      { url: i01, type: 'full' },
+      { url: i02, type: 'split' },
+      { url: i03, type: 'split' },
       { url: b2, type: 'split' },
       { url: heroCouple, type: 'split' },
-      { url: wedding, type: 'full' }
+      { url: wedding, type: 'full' },
+      { url: i04, type: 'split' },
+      { url: i05, type: 'split' },
     ],
     nextPost: { slug: "evening-of-love", name: "An Evening of Love" }
   },
@@ -54,9 +69,13 @@ export const photographyBlogs: Record<string, PhotoBlogData> = {
     heroImage: mosaic,
     images: [
       { url: mosaic, type: 'full' },
+      { url: i06, type: 'split' },
+      { url: i07, type: 'split' },
       { url: b1, type: 'split' },
       { url: b2, type: 'split' },
-      { url: fashion, type: 'full' }
+      { url: i08, type: 'full' },
+      { url: fashion, type: 'split' },
+      { url: i09, type: 'split' },
     ],
     nextPost: { slug: "alia-ranbir-mumbai", name: "Alia & Ranbir" }
   },
@@ -74,9 +93,16 @@ export const photographyBlogs: Record<string, PhotoBlogData> = {
     heroImage: wedding,
     images: [
       { url: wedding, type: 'full' },
-      { url: heroWedding, type: 'split' },
+      { url: i01, type: 'split' },
+      { url: i02, type: 'split' },
+      { url: heroWedding, type: 'full' },
+      { url: i03, type: 'split' },
+      { url: i04, type: 'split' },
       { url: b1, type: 'split' },
-      { url: mosaic, type: 'full' }
+      { url: i05, type: 'split' },
+      { url: mosaic, type: 'full' },
+      { url: i06, type: 'split' },
+      { url: i07, type: 'split' },
     ],
     nextPost: { slug: "kiara-siddharth", name: "Kiara & Siddharth" }
   },
@@ -94,8 +120,11 @@ export const photographyBlogs: Record<string, PhotoBlogData> = {
     heroImage: fashion,
     images: [
       { url: fashion, type: 'full' },
-      { url: prewedding, type: 'split' },
+      { url: i08, type: 'split' },
+      { url: i09, type: 'split' },
+      { url: prewedding, type: 'full' },
       { url: b2, type: 'split' },
+      { url: i10, type: 'split' },
       { url: heroCouple, type: 'full' }
     ],
     nextPost: { slug: "reva-zach", name: "Reva & Zach" }

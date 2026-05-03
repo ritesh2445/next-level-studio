@@ -81,6 +81,9 @@
   *, *::before, *::after { box-sizing: border-box; }
   * { @apply border-border; }
   html { scroll-behavior: smooth; }
+  section[id] {
+    scroll-margin-top: 150px;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);

@@ -15,7 +15,7 @@ const grid = [
 ];
 
 export const IconicGrid = () => (
-  <section className="bg-background" style={{ contentVisibility: 'auto' } as any}>
+  <section className="bg-background">
     <div className="grid grid-cols-2 md:grid-cols-5 gap-0 w-full">
       {grid.map((src, i) => (
         <div 

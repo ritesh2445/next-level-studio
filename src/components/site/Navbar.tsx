@@ -50,7 +50,7 @@ export const Navbar = () => {
   const links = [
     { href: "/#photography", label: "Photography" },
     { href: "/#films", label: "Films" },
-    { href: "/#contact", label: "Contact Us" },
+    { href: "/#footer", label: "Contact Us" },
     { href: "/#about", label: "About" },
   ];
 
@@ -60,7 +60,13 @@ export const Navbar = () => {
       const id = href.replace("/#", "");
       const el = document.getElementById(id);
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const offset = 150; 
+        const y = el.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: y,
+          behavior: "smooth"
+        });
         setOpen(false);
       }
     }
