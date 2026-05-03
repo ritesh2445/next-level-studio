@@ -7,6 +7,10 @@ interface MarqueeStripProps {
   description?: string;
   /** Optional additional classes */
   className?: string;
+  /** Optional classes for the description paragraph */
+  descriptionClassName?: string;
+  /** Optional classes for the inner container */
+  containerClassName?: string;
   /** @deprecated kept for backwards compatibility */
   duration?: number;
 }
@@ -16,7 +20,7 @@ interface MarqueeStripProps {
  * Inspired by the Tarun Tahiliani "Signature Realms of Style" band:
  * white background, centered serif heading, soft body copy.
  */
-export const MarqueeStrip = ({ text, description, className }: MarqueeStripProps) => {
+export const MarqueeStrip = ({ text, description, className, descriptionClassName, containerClassName }: MarqueeStripProps) => {
   // Use the first segment as the heading; remaining segments become the description
   // when no explicit description is supplied.
   const segments = text.split("•").map((s) => s.trim()).filter(Boolean);
@@ -26,12 +30,12 @@ export const MarqueeStrip = ({ text, description, className }: MarqueeStripProps
 
   return (
     <section className={cn("w-full bg-white pt-10 pb-14 px-5 md:py-10 md:px-6 border-y border-hairline", className)}>
-      <div className="max-w-4xl mx-auto text-center">
+      <div className={cn("max-w-4xl mx-auto text-center", containerClassName)}>
         <h2 className="font-century font-bold text-[1.15rem] md:text-[1.6rem] tracking-[0.1em] md:tracking-[0.15em] uppercase text-neutral-600 m-0">
           {heading}
         </h2>
         {fallbackDescription && (
-          <p className="mt-1 text-[13px] md:text-base leading-[1.8] text-neutral-600 font-sans px-2 md:px-0 max-w-2xl mx-auto">
+          <p className={cn("mt-1 text-[13px] md:text-base leading-[1.8] text-neutral-600 font-sans px-2 md:px-0 max-w-2xl mx-auto", descriptionClassName)}>
             {fallbackDescription}
           </p>
         )}

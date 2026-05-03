@@ -19,7 +19,7 @@ export const PhotoBlog = () => (
           <span className="label-dash" />
           <span className="label-text">Photography</span>
         </div>
-        <h2 className="font-display text-[2.2rem] font-normal text-ink leading-tight">Our Work</h2>
+        <h2 className="font-century font-bold text-[1.15rem] md:text-[1.6rem] tracking-[0.1em] md:tracking-[0.15em] uppercase text-neutral-600 leading-tight">Our Work</h2>
       </div>
       <a href="#photography" className="font-sans text-[0.75rem] text-ink hover:text-primary tracking-[0.05em]">View All →</a>
     </div>

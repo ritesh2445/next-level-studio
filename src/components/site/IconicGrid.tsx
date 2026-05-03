@@ -6,13 +6,12 @@ import films from "@/assets/films.jpg";
 import b1 from "@/assets/b1.jpg";
 import b2 from "@/assets/b2.jpg";
 import coupleArch from "@/assets/hero-couple-arch.jpg";
-import mosaic from "@/assets/mosaic-couple.jpg";
+
 
 
 const grid = [
   wedding, hero, fashion, prewed, films,
   b2, b1, coupleArch, b1, wedding,
-  mosaic, prewed, fashion, films, b2,
 ];
 
 export const IconicGrid = () => (

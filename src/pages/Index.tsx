@@ -19,7 +19,9 @@ const Index = () => {
       <MarqueeStrip
         text="Signature Realms of Storytelling"
         description="Our signature style lies in crafting visually striking Western-themed wedding stories that feel both cinematic and deeply personal. We specialize in creating creative, thoughtfully composed shots that go beyond traditional frames—blending mood, styling, and storytelling into every scene. From concept-driven setups to dynamic intro pattern videos, we design each sequence with a strong narrative flow that captures the essence of your celebration. Our approach is not just about documenting moments, but about elevating them into timeless visuals with a distinctive, modern Western aesthetic that sets your story apart."
-        className="py-12 md:py-24"
+        className="py-[calc(3rem-1.0vh)] md:py-[calc(6rem-7.0vh)]"
+        containerClassName="max-w-7xl"
+        descriptionClassName="max-w-5xl md:max-w-7xl mx-auto"
       />
       <HeroImage />
       <AboutEditorial />
@@ -33,7 +35,7 @@ const Index = () => {
       <MarqueeStrip
         text="A seamless blend of tradition and emotion"
         description="Explore weddings, cinematic films, pre-wedding stories and fashion editorials — crafted by the studio of Next Level Photography, Amravati."
-        className="pb-0 md:pt-14 md:pb-0"
+        className="pb-0 md:pt-14 md:pb-0 border-b-0"
       />
       <PhotoBlog />
       <FilmsSection />
