@@ -1,7 +1,7 @@
 import { Instagram, Facebook, Twitter } from "lucide-react";
 
 export const Footer = () => (
-  <footer className="bg-[hsl(var(--dark-bg))] text-white px-[5%] pt-[calc(4rem-6vh)] md:pt-[calc(8rem-7vh)] pb-[calc(1rem-2vh)] md:pb-8">
+  <footer className="bg-[hsl(var(--dark-bg))] text-white px-[5%] pt-[calc(4rem-4vh)] md:pt-[calc(8rem-7vh)] pb-[calc(1rem-2vh)] md:pb-8">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-start max-w-7xl mx-auto">
       {/* Left: logo + wordmark + socials */}
       <div className="flex flex-col items-start text-left">
