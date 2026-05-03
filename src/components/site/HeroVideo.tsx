@@ -31,7 +31,8 @@ export const HeroVideo = () => {
         muted={muted}
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
+        fetchPriority="high"
         className="hidden sm:block absolute inset-0 w-full h-full object-cover"
       />
       {/* Mobile video */}
@@ -43,7 +44,8 @@ export const HeroVideo = () => {
         muted={muted}
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
+        fetchPriority="high"
         className="sm:hidden absolute inset-0 w-full h-full object-cover"
       />
 
