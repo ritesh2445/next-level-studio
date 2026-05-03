@@ -28,7 +28,7 @@ export const ContactSection = () => {
           </p>
 
           {[
-            { label: "Studio", values: ["Dreamz Landmark, Amravati,", "Maharashtra 444601"] },
+            { label: "Office", values: ["Dreamz Landmark, Amravati,", "Maharashtra 444601"] },
             { label: "Email", values: ["nextlevelphotography.in@gmail.com"] },
             { label: "Phone", values: ["+91 9545136425", "+91 8788113565"] },
           ].map((info, i) => (

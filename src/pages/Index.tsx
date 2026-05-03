@@ -17,6 +17,7 @@ const Index = () => {
       <Navbar />
       <HeroVideo />
       <MarqueeStrip
+        id="about"
         text="Signature Realms of Storytelling"
         description="Our signature style lies in crafting visually striking Western-themed wedding stories that feel both cinematic and deeply personal. We specialize in creating creative, thoughtfully composed shots that go beyond traditional frames—blending mood, styling, and storytelling into every scene. From concept-driven setups to dynamic intro pattern videos, we design each sequence with a strong narrative flow that captures the essence of your celebration. Our approach is not just about documenting moments, but about elevating them into timeless visuals with a distinctive, modern Western aesthetic that sets your story apart."
         className="py-[calc(3rem-1.0vh)] md:py-[calc(6rem-7.0vh)]"
