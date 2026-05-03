@@ -29,34 +29,42 @@ const PhotographyListing = () => {
         </div>
       </section>
 
-      {/* ── Listing Grid ── */}
+      {/* ── Listing Feed ── */}
       <section className="px-4 md:px-[8%] pb-24">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-y-24 md:gap-x-16">
+        <div className="max-w-5xl mx-auto space-y-24 md:space-y-32">
           {blogs.map((blog) => (
-            <div key={blog.slug} className="flex flex-col group">
-              <Link to={`/photography/${blog.slug}`} className="block overflow-hidden mb-6">
+            <div key={blog.slug} className="flex flex-col">
+              <Link to={`/photography/${blog.slug}`} className="block overflow-hidden mb-8">
                 <img 
                   src={blog.heroImage} 
                   alt={blog.couple} 
-                  className="w-full h-auto aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-auto max-h-[85vh] object-cover hover:scale-[1.02] transition-transform duration-700"
                   loading="lazy"
                   decoding="async"
                 />
               </Link>
-              <div className="text-center">
-                <h2 className="font-didot text-3xl md:text-4xl text-ink mb-2">
+              <div className="max-w-3xl">
+                <div className="flex gap-4 mb-4">
+                  <span className="font-century text-[10px] tracking-[0.2em] uppercase text-ink-mute">
+                    {blog.location.includes("International") ? "International" : "Indian"}
+                  </span>
+                  <span className="font-century text-[10px] tracking-[0.2em] uppercase text-ink-mute">
+                    Intimate
+                  </span>
+                </div>
+                <h2 className="font-didot text-3xl md:text-5xl text-ink mb-6">
                   <Link to={`/photography/${blog.slug}`} className="hover:text-primary transition-colors">
                     {blog.couple}
                   </Link>
                 </h2>
-                <p className="font-century text-[0.7rem] md:text-sm tracking-[0.15em] uppercase text-ink-mute mb-6">
-                  {blog.location} · {blog.date}
+                <p className="font-century text-base md:text-lg leading-relaxed text-ink-soft mb-8">
+                  {blog.description}
                 </p>
                 <Link 
                   to={`/photography/${blog.slug}`} 
-                  className="inline-block border-b border-ink pb-1 font-sans text-[0.7rem] tracking-[0.2em] uppercase text-ink hover:text-primary hover:border-primary transition-colors"
+                  className="inline-block font-sans text-[0.8rem] tracking-[0.1em] text-ink hover:text-primary transition-colors"
                 >
-                  Read More
+                  Read More →
                 </Link>
               </div>
             </div>
