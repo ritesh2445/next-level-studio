@@ -1,6 +1,6 @@
 export const WhatsAppFab = () => (
   <a
-    href="https://wa.me/919545136425"
+    href="https://wa.me/919545136425?text=Hi%20Next%20Level%20Photography,%20can%20we%20schedule%20a%20meeting%20anysoon?"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Chat on WhatsApp"
