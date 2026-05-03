@@ -28,7 +28,14 @@ export const PhotoBlog = () => (
       {cards.map((c, i) => (
         <Link key={i} to={`/photography/${c.slug}`} className="block text-ink">
           <div className="img-zoom mb-3" style={{ aspectRatio: "3 / 4" }}>
-            <img src={c.img} alt={c.couple} loading="lazy" />
+            <img 
+              src={c.img} 
+              alt={c.couple} 
+              loading="lazy" 
+              decoding="async"
+              className="opacity-0 transition-opacity duration-700"
+              onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
+            />
           </div>
           <h3 className="font-display italic text-base mt-1">{c.couple}</h3>
           <p className="font-sans text-[0.65rem] tracking-[0.12em] text-ink-mute mt-1">{c.date}</p>

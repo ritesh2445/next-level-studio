@@ -22,7 +22,14 @@ export const IconicGrid = () => (
           key={i} 
           className="img-zoom relative aspect-square"
         >
-          <img src={src} alt={`Iconic frame ${i + 1}`} loading="lazy" />
+          <img 
+            src={src} 
+            alt={`Iconic frame ${i + 1}`} 
+            loading="lazy" 
+            decoding="async"
+            className="opacity-0 transition-opacity duration-700"
+            onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
+          />
         </div>
       ))}
     </div>
