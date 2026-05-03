@@ -58,7 +58,7 @@ export const Footer = () => (
         </a>
         <div className="hidden md:block mt-6">
           <a 
-            href="https://wa.me/919545136425?text=Hi%20Next%20Level%20Photography,%20can%20we%20schedule%20a%20meeting%20anysoon?" 
+            href="https://wa.me/919545136425?text=Hi%20Next%20Level%20Photography,%20Can%20we%20schedule%20a%20meeting?" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group relative border border-white px-10 py-3 text-[0.7rem] tracking-[0.2em] uppercase overflow-hidden transition-colors duration-300 hover:text-black inline-block w-60 text-center bg-transparent"
@@ -81,7 +81,7 @@ export const Footer = () => (
           <div className="absolute inset-0 bg-white transform scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100" />
         </a>
         <a 
-          href="https://wa.me/919545136425?text=Hi%20Next%20Level%20Photography,%20can%20we%20schedule%20a%20meeting%20anysoon?" 
+          href="https://wa.me/919545136425?text=Hi%20Next%20Level%20Photography,%20Can%20we%20schedule%20a%20meeting?" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group relative border border-white px-10 py-3 text-[0.7rem] tracking-[0.2em] uppercase overflow-hidden transition-colors duration-300 hover:text-black w-full text-center bg-transparent"
