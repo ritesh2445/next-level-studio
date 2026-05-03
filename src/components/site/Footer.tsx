@@ -52,7 +52,7 @@ export const Footer = () => (
         </div>
 
         {/* Buttons row: Side-by-side on both mobile and desktop with reduced gap */}
-        <div className="flex flex-row gap-3 md:gap-6 mt-8 md:mt-10 w-full md:w-auto justify-start">
+        <div className="flex flex-row gap-3 md:gap-6 mt-8 md:mt-[calc(2.5rem+5vh)] w-full md:w-auto justify-start">
           <a 
             href="https://www.google.com/maps/search/?api=1&query=Next+Level+Photography+Amravati" 
             target="_blank" 
