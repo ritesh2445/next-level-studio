@@ -15,7 +15,7 @@ const grid = [
 ];
 
 export const IconicGrid = () => (
-  <section className="bg-background">
+  <section className="bg-background" style={{ contentVisibility: 'auto' } as any}>
     <div className="grid grid-cols-2 md:grid-cols-5 gap-0 w-full">
       {grid.map((src, i) => (
         <div 
@@ -27,8 +27,6 @@ export const IconicGrid = () => (
             alt={`Iconic frame ${i + 1}`} 
             loading="lazy" 
             decoding="async"
-            className="opacity-0 transition-opacity duration-700"
-            onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
           />
         </div>
       ))}

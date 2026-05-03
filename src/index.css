@@ -87,22 +87,8 @@
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
-  img { 
-    max-width: 100%; 
-    display: block; 
-    content-visibility: auto;
-  }
+  img { max-width: 100%; display: block; }
   a { text-decoration: none; color: inherit; }
-}
-
-/* Performance Optimizations */
-.img-zoom {
-  will-change: transform;
-}
-
-section {
-  content-visibility: auto;
-  contain-intrinsic-size: 1px 500px;
 }
 
 @layer components {

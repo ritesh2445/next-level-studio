@@ -5,6 +5,8 @@ export const HeroImage = () => (
     <img
       src={heroImg}
       alt="Hero Portrait — Next Level Photography"
+      fetchPriority="high"
+      decoding="async"
       className="w-full h-full md:h-auto object-cover md:object-contain md:scale-100"
     />
   </section>

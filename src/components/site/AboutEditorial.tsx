@@ -13,6 +13,7 @@ export const AboutEditorial = () => {
             src={modernText}
             alt="A Modern Approach to an Age Old Tradition"
             className="w-full h-auto"
+            decoding="async"
           />
         </div>
 
