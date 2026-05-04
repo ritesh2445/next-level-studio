@@ -60,7 +60,7 @@ export const FilmsSection = () => (
 
             {/* Location */}
             <p
-              className="uppercase text-white/80 mt-1 md:mt-3 font-didot"
+              className="uppercase text-white/80 mt-1 md:mt-3 font-century"
               style={{ fontSize: "clamp(0.5rem, 1.2vw, 0.9rem)", letterSpacing: "0.3em" }}
             >
               {c.location}

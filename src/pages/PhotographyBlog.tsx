@@ -16,7 +16,7 @@ const PhotographyBlog = () => {
 
   if (!blog) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#f5f0e9]">
+      <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <h1 className="font-didot text-2xl mb-4">Post Not Found</h1>
           <Link to="/" className="text-primary hover:underline">Return Home</Link>
@@ -26,7 +26,7 @@ const PhotographyBlog = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#f5f0e9]">
+    <div className="min-h-screen bg-background">
       <Navbar />
       
       {/* ── Intro Section ── */}
@@ -56,68 +56,19 @@ const PhotographyBlog = () => {
 
       {/* ── Image Grid ── */}
       <section className="px-2 md:px-[5%] pb-24">
-        <div className="max-w-[1400px] mx-auto space-y-2 md:space-y-4">
-          {/* We'll loop through the images and render them based on type */}
-          {/* For this simplified demo, we'll group split images into rows */}
-          {(() => {
-            const elements: JSX.Element[] = [];
-            let i = 0;
-            while (i < blog.images.length) {
-              const img = blog.images[i];
-              if (img.type === 'full') {
-                elements.push(
-                  <div key={i} className="w-full overflow-hidden flex justify-center bg-[#f5f0e9]">
-                    <img 
-                      src={img.url} 
-                      alt="" 
-                      className="w-full max-h-[85vh] object-contain block mx-auto"
-                      loading="lazy"
-                    />
-                  </div>
-                );
-                i++;
-              } else if (img.type === 'split') {
-                const nextImg = blog.images[i + 1];
-                if (nextImg && nextImg.type === 'split') {
-                  elements.push(
-                    <div key={i} className="grid grid-cols-2 gap-2 md:gap-4 bg-[#f5f0e9]">
-                      <div className="overflow-hidden flex justify-center">
-                        <img 
-                          src={img.url} 
-                          alt="" 
-                          className="w-full max-h-[85vh] object-contain"
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="overflow-hidden flex justify-center">
-                        <img 
-                          src={nextImg.url} 
-                          alt="" 
-                          className="w-full max-h-[85vh] object-contain"
-                          loading="lazy"
-                        />
-                      </div>
-                    </div>
-                  );
-                  i += 2;
-                } else {
-                  // Fallback if only one split image remains
-                  elements.push(
-                    <div key={i} className="w-1/2 mx-auto overflow-hidden flex justify-center bg-[#f5f0e9]">
-                      <img 
-                        src={img.url} 
-                        alt="" 
-                        className="w-full max-h-[85vh] object-contain"
-                        loading="lazy"
-                      />
-                    </div>
-                  );
-                  i++;
-                }
-              }
-            }
-            return elements;
-          })()}
+        <div className="max-w-[1400px] mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
+            {blog.images.map((img, i) => (
+              <div key={i} className="overflow-hidden flex justify-center aspect-[4/5] bg-background">
+                <img 
+                  src={img.url} 
+                  alt="" 
+                  className="w-full h-full object-cover block"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

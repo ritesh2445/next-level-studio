@@ -31,7 +31,7 @@ export const PhotoBlog = () => (
             <img src={c.img} alt={c.couple} loading="lazy" decoding="async" />
           </div>
           <h3 className="font-display italic text-base mt-1">{c.couple}</h3>
-          <p className="font-sans text-[0.65rem] tracking-[0.12em] text-ink-mute mt-1">{c.date}</p>
+          <p className="font-century uppercase text-[0.65rem] tracking-[0.12em] text-ink-mute mt-1">{c.date}</p>
         </Link>
       ))}
     </div>
