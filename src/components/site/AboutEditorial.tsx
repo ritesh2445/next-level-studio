@@ -20,7 +20,7 @@ export const AboutEditorial = () => {
         {/* ── Body copy ── */}
         <div className="max-w-3xl text-center">
           <p className="font-sans text-[13px] md:text-base leading-[1.8] text-neutral-600 mb-8 font-normal">
-            Capturing timeless love stories through elegant, cinematic wedding photography — where every glance, every tear, every unscripted laugh is preserved with soul and artistry.
+            Capturing timeless love stories through elegant, cinematic wedding photography where every glance, every tear, every unscripted laugh is preserved with soul and artistry.
           </p>
         </div>
       </div>
