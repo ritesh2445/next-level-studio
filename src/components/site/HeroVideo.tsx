@@ -1,10 +1,6 @@
 import { useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-
-const HERO_DESKTOP = "https://shop.taruntahiliani.com/cdn/shop/videos/c/vp/80628b2742e94c608478c9aa8fdc6a56/80628b2742e94c608478c9aa8fdc6a56.HD-720p-3.0Mbps-81761231.mp4?v=0";
-const HERO_MOBILE = "https://shop.taruntahiliani.com/cdn/shop/videos/c/vp/d1f0ed5fda3a4871aff35fd320d663f1/d1f0ed5fda3a4871aff35fd320d663f1.HD-1080p-4.8Mbps-81761232.mp4?v=0";
-const HERO_DESKTOP_POSTER = "https://shop.taruntahiliani.com/cdn/shop/files/preview_images/80628b2742e94c608478c9aa8fdc6a56.thumbnail.0000000000_400x.jpg?v=1776329589";
-const HERO_MOBILE_POSTER = "https://shop.taruntahiliani.com/cdn/shop/files/preview_images/d1f0ed5fda3a4871aff35fd320d663f1.thumbnail.0000000000_400x.jpg?v=1776329606";
+import heroVideo from "../../assets/hero video.mp4";
 
 export const HeroVideo = () => {
   const desktopRef = useRef<HTMLVideoElement>(null);
@@ -22,31 +18,19 @@ export const HeroVideo = () => {
 
   return (
     <section id="top" className="relative w-full h-[73vh] md:h-[80vh] overflow-hidden bg-black">
-      {/* Desktop video */}
+      {/* Responsive video */}
       <video
         ref={desktopRef}
-        src={HERO_DESKTOP}
-        poster={HERO_DESKTOP_POSTER}
+        src={heroVideo}
         autoPlay
         muted={muted}
         loop
         playsInline
         preload="auto"
         fetchPriority="high"
-        className="hidden sm:block absolute inset-0 w-full h-full object-cover"
-      />
-      {/* Mobile video */}
-      <video
-        ref={mobileRef}
-        src={HERO_MOBILE}
-        poster={HERO_MOBILE_POSTER}
-        autoPlay
-        muted={muted}
-        loop
-        playsInline
-        preload="auto"
-        fetchPriority="high"
-        className="sm:hidden absolute inset-0 w-full h-full object-cover"
+        // Use object-[percentage_center] to shift the video horizontally on mobile.
+        // 50% is perfectly centered. Lower than 50% shifts it right, higher than 50% shifts it left.
+        className="absolute inset-0 w-full h-full object-cover object-[50%_center] md:object-center"
       />
 
       {/* Centered overlay text — mimics Tarun Tahiliani hero */}
