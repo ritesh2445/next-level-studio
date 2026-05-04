@@ -66,11 +66,11 @@ const PhotographyBlog = () => {
               const img = blog.images[i];
               if (img.type === 'full') {
                 elements.push(
-                  <div key={i} className="w-full overflow-hidden">
+                  <div key={i} className="w-full overflow-hidden flex justify-center bg-[#f5f0e9]">
                     <img 
                       src={img.url} 
                       alt="" 
-                      className="w-full h-auto object-cover block"
+                      className="w-full max-h-[85vh] object-contain block mx-auto"
                       loading="lazy"
                     />
                   </div>
@@ -80,20 +80,20 @@ const PhotographyBlog = () => {
                 const nextImg = blog.images[i + 1];
                 if (nextImg && nextImg.type === 'split') {
                   elements.push(
-                    <div key={i} className="grid grid-cols-2 gap-2 md:gap-4">
-                      <div className="overflow-hidden">
+                    <div key={i} className="grid grid-cols-2 gap-2 md:gap-4 bg-[#f5f0e9]">
+                      <div className="overflow-hidden flex justify-center">
                         <img 
                           src={img.url} 
                           alt="" 
-                          className="w-full h-auto object-cover"
+                          className="w-full max-h-[85vh] object-contain"
                           loading="lazy"
                         />
                       </div>
-                      <div className="overflow-hidden">
+                      <div className="overflow-hidden flex justify-center">
                         <img 
                           src={nextImg.url} 
                           alt="" 
-                          className="w-full h-auto object-cover"
+                          className="w-full max-h-[85vh] object-contain"
                           loading="lazy"
                         />
                       </div>
@@ -103,11 +103,11 @@ const PhotographyBlog = () => {
                 } else {
                   // Fallback if only one split image remains
                   elements.push(
-                    <div key={i} className="w-1/2 mx-auto overflow-hidden">
+                    <div key={i} className="w-1/2 mx-auto overflow-hidden flex justify-center bg-[#f5f0e9]">
                       <img 
                         src={img.url} 
                         alt="" 
-                        className="w-full h-auto object-cover"
+                        className="w-full max-h-[85vh] object-contain"
                         loading="lazy"
                       />
                     </div>

@@ -1,7 +1,7 @@
 import { Instagram, Facebook, Twitter } from "lucide-react";
 
 export const Footer = () => (
-  <footer id="footer" className="bg-[hsl(var(--dark-bg))] text-white px-[5%] pt-[calc(4rem-4vh)] md:pt-[calc(8rem-7vh)] pb-[calc(1rem-2vh)] md:pb-8">
+  <footer id="footer" className="bg-[hsl(var(--dark-bg))] text-white px-[5%] pt-[calc(4rem-4vh)] md:pt-[calc(8rem-7vh)] pb-[calc(1rem+2vh)] md:pb-8">
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 items-start max-w-7xl mx-auto">
       {/* Left: logo + wordmark + socials */}
       <div className="flex flex-col items-start text-left">
@@ -75,11 +75,11 @@ export const Footer = () => (
       </div>
     </div>
 
-    <div className="border-t border-white/10 mt-8 md:mt-12 pt-3 md:pt-4 text-center md:flex md:justify-between md:text-left items-center max-w-7xl mx-auto">
+    <div className="border-t border-white/10 mt-8 md:mt-12 pt-3 md:pt-4 text-center flex flex-col items-center justify-center gap-2 max-w-7xl mx-auto">
       <p className="font-sans text-[0.6rem] tracking-[0.1em] text-white/40">
         © 2026 NEXT LEVEL Photography. All rights reserved.
       </p>
-      <p className="font-sans text-[0.6rem] tracking-[0.1em] text-white/40 hidden md:block">
+      <p className="font-sans text-[0.6rem] tracking-[0.1em] text-white/40">
         Crafted with ♥ in Amravati
       </p>
     </div>
