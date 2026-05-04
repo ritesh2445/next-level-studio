@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
-import heroVideo from "../../assets/hero video.mp4";
+import heroVideo from "../../assets/hero-video.mp4";
+import heroPoster from "../../assets/hero-poster.jpg";
 
 export const HeroVideo = () => {
   const desktopRef = useRef<HTMLVideoElement>(null);
@@ -22,6 +23,7 @@ export const HeroVideo = () => {
       <video
         ref={desktopRef}
         src={heroVideo}
+        poster={heroPoster}
         autoPlay
         muted={muted}
         loop
