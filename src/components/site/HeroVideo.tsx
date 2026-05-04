@@ -38,7 +38,7 @@ export const HeroVideo = () => {
       {/* Centered overlay text — mimics Tarun Tahiliani hero */}
       <div className="absolute inset-0 flex flex-col items-center justify-end pb-16 md:pb-20 text-white text-center pointer-events-none">
         <h1 className="font-display text-[2rem] md:text-[2.6rem] font-normal mt-3 md:mt-4 tracking-wide">
-          Next is Now
+          Stories in Motion
         </h1>
         <a
           href="#photography"
